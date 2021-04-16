@@ -1,11 +1,12 @@
-![Screenshot_2021-04-06 Ramé Deco](https://user-images.githubusercontent.com/58121395/113718450-0749d380-96c3-11eb-8c0d-1fb264d4c60b.png)
+![Screenshot_2021-04-16 Ramé Deco(2)](https://user-images.githubusercontent.com/58121395/115084348-26284100-9edf-11eb-964c-5368717315e1.png)
 
-##Cosas que faltaron del sprint_6
-el metodo de index sigue llamando a json y el tratamiento de una factura no se pudo llegar y obtener objetos por categoria. Algo que aparecio al hacer un select es que sequelize modificaba las foraneas. En vez tener  un guion bajo para las foraneas o para los timestamps pasaba lo mismo. Eso causaba que las select se rompiera ya que no concordaba con la base. Pasado eso se logro arreglar los timestamps agregando config. 
-Para los foraneas habia varios problemas primero un error tipografico en las relaciones. arreglando eso pasaba lo mismo. La forma de arreglarlo fue sacar la descripcion de las relaciones ya que el efecto de por ejemplo poner foreign key no pasaba. se soluciono usando  "underscored": true. Pero eso trajo modificaciones en los scripts de base la base y roturas en querys, mas las que faltaban por hacer. 
 
-los usuarios para probar son 
+##Usuarios para comprobar funcionamiento:
+
+#Usuario cliente del comercio registrado
 USUARIO:user
+
+#Usuario administrador
 CONTRASEÑA:123456
 USUARIO:admin
 CONTRASEÑA:admin123
