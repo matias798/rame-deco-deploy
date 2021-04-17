@@ -6,7 +6,8 @@
         </div>
         
         <div class="card-container-product-description" style="left:<%= element.description_left %>%; top:<%= element.description_top %>%; ">
-            <a class="links" href="/products/detail/<%=element.product.id %>"><h3 class="product_card_text_mark product_card_text green_font"><%= element.product.title %></h3></a>
+            <a class="links" href="/products/detail/<%=element.product.id %>">
+                <h3 class="product_card_text_mark product_card_text green_font text-center"><%= element.product.title %></h3></a>
             <p class="product_card_text"><%= element.product.summary %></p>
             <p class="product_card_text_mark product_card_text green_font"><%= element.product.price %></p>
         </div>        

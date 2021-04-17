@@ -20,8 +20,8 @@
         <i class="fas fa-shopping-cart green_font"></i>
       </a>
       <% if (user ==undefined) { %>
-        <a class="links" href="/users/login">Ingresar</a>
-        <a class="links" href="/users/register">Registrarse</a>
+        <a class="links nounderline" href="/users/login">Ingresar</a>
+        <a class="links nounderline" href="/users/register">Registrarse</a>
       <% } %> 
       <% if (user !=undefined) { %>  
         <a href="/users/profile/<%=user.id%>" class="image_container green_font links">

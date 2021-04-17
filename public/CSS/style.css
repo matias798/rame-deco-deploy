@@ -617,10 +617,9 @@ border-radius: 20px;
 
     .register-password-msg{
         margin-bottom: 1em;
-        font-size: 1em;
+        font-size: 0.8em;
         display: block;
-        text-align: left;
-        margin-left: 6em;
+        text-align: center;
         font-style: italic;
     }
 
@@ -682,8 +681,7 @@ border-radius: 20px;
     }
 
     .input-plus-icon{
-        width: 90%;
-        margin-left: 1.6em;
+       
     }
     
 
