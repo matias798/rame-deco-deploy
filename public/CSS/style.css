@@ -53,7 +53,8 @@ form input{
 }
 
 .green_font{
-    color: #0096a0;
+    color:  #212f3d  ;
+    font-weight:bold;
 }
 
 /*Header styles*/
@@ -373,6 +374,13 @@ img.product_card_img{
     text-overflow: clip;
 }
 
+
+.productSummary,.productSummary:hover{
+    color:    #0096a0    ;
+    font-weight: 600;
+}
+
+
 .pointer-container{
     background-color:#484848;
     border-radius: 50%;
@@ -675,9 +683,6 @@ border-radius: 20px;
         margin-left: 4em;
     }
 
-    .input-plus-icon{
-       
-    }
     
 
     /* shoppingcart styles */
