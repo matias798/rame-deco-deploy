@@ -16,9 +16,15 @@
       <button class="search-button greend_background white_font" type="submit"><i class="fas fa-search"></i></button>
     </form>
     <div class="nav_links">
+      
+      <% if (user !=undefined) { %>  
+      
       <a href="/products/shoppingcart" class="links" style="margin-top: 3px;">
         <i class="fas fa-shopping-cart green_font"></i>
       </a>
+      <% } %> 
+
+
       <% if (user ==undefined) { %>
         <a class="links nounderline" href="/users/login">Ingresar</a>
         <a class="links nounderline" href="/users/register">Registrarse</a>
