@@ -3,80 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <!-- local css -->
     <link rel="stylesheet" href="../CSS/style.css">
+   <!-- /local css -->
+
+   <!-- Bootswatch css -->
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+   <!-- Bootswatch css -->
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
+<!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
+<!-- Fonts -->
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    
     <title>Ingresá</title>
-	<link rel = "icon" href="../../images/white-logo.jpeg" type = "image/x-icon"> 
+	
+    <!-- favicon -->
+    <link rel = "icon" href="../../images/white-logo.jpeg" type = "image/x-icon"> 
+    <!-- favicon -->
     
     
-    <!-- Bootsrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
-    <!-- Bootsrap 5 -->
+   
     
 </head>
-<body style="margin:0; background-color: #e2e8f0; ">
+<body>
+
     <%- include('parcials/header.ejs',{'user':user}) %> 
-    <main class="lr-main-container">
-        <form class="lr-form loginForm" action="/users/login" method="POST">
-            <div class="lr-title">
-                <h2 class="text-center">Iniciá sesión</h2>
-            </div>
-              
-               
-                <!-- div para mostrar errores en js -->
-                <div class="userError"></div>
-                
-                <div class="justifi-content-center">
-                <input class="form-control user m-4" type="text" id="username" name="username" placeholder="Usuario">
-                  </div>  
-                
-                
-               
-                <!-- div para mostrar errores en js -->
-                <div class="passwordError"></div>
-                
-                <div class="">
-                    <div class="justifi-content-center">
-                    <input class="form-control m-4 writePassword" type="password" id="password" name="password" placeholder="Contraseña">
-                </div>
 
-                    <span class="show-password"><i class="fas fa-eye"></i></span>
-                </div>
-                <div class="forgot-pass-msg">
-                    <a href="">¿Olvidaste tu contraseña?</a>
-                </div>
-                    
+  
+    <form class="jumbotron loginForm" action="/users/login" method="POST">
 
-  <!-- muestra errores con express-validator --> 
+        <div class="lr-title">
+            <h2 class="text-center mb-5 p-3">Iniciá sesión</h2>
+        </div>
+          
+           
+            <!-- div para mostrar errores en js -->
+            <div class="userError"></div>
+            
+
+         <!-- Shows express validator errors -->
   <% if (typeof errors != 'undefined') { %> 
     <% for (let i =0 ; i < errors.length;i++){ %> 
     <div class="d-flex justify-content-center"> 
-    <div class=' w-70 p-1 mb-2 bg-secondary text-white text-center '>
+    <div class=' w-70 p-1 mb-2  text-center '>
      <%=errors[i].msg%>  </div>
      </div>
      <% } %> 
      <% } %> 
 
+     <!-- /Shows express validator errors -->
 
-  <!-- Muestra error de que no matchee contraseña o usuario --> 
-  <% if (typeof errrorMessage != 'undefined') { %> 
+
+
+    <!-- user -->
+    <div class="form-group">
+        <div class="justifi-content-center">
+<label for="password ml-5 pb-5">  Usuario</label>
+        </div>
+        <input class="form-control user m-4" type="text" id="username" aria-describedby="emailHelp" name="username" placeholder="Escribe tu nombre de usuario">
+      </div>
+    <!-- /user -->
+
+
+<!-- Password -->
+
+<div class="justifi-content-center">
+<label for="password ml-5 pb-5">  Contraseña</label>
+
+</div>
+      <div class="form-group">
+              
+        
+        <div class="d-flex justify-content-evenly">
+        <input class="form-control  m-2  writePassword" style="width: 90vw;"  type="password" id="password" name="password" placeholder="      Escribe tu Contraseña">
+
+        <!-- shows password  -->
+        <div class="d-flex align-items-center show-password"><i class="fas fa-eye"></i></div>
+        <!-- shows password  -->
+    
+    </div>
+
+        <!-- Shows error  with the password if it exists-->
+        <div class="passwordError"></div>
+        <!-- /Shows error  with the password if it exists-->
+
+  
+
+
+    </div>    
+<!-- /Password -->
+
+<!-- Shows error if the user or password isn't found -->
+<% if (typeof errrorMessage != 'undefined') { %> 
     <div class="d-flex justify-content-center"> 
     <div style="color: red;"><%=errrorMessage%> </div>
      </div>
      <% } %>
-  <!-- / Muestra error de que no matchee contraseña o usuario --> 
+<!-- Shows error if the user or password isn't found -->
 
 
-                <button class="btn-login-register form_lr-width" type="submit">Ingresar</button><br><br>
-                <input type="checkbox" name="recordarme" value="recordarme">Recordar mi usuario y contraseña.
-                <p>Si todavía no tenés cuenta, ingresá <a href="/users/register">acá</a></p>
-        </form>        
-    </main> 
-    <%- include('parcials/footer.ejs') %>
 
-     <script src="../../js/login.js"></script>
+
+
+
+   
+<!-- Remember me -->
+<span class=" pl-3 ml-5 mb-4">
+<input type="checkbox" name="recordarme" class="form-check-input" value="recordarme"> Recordame!
+</span>
+    <!-- /Remember me -->
+
+<!-- Login -->
+<div class="d-flex justify-content-end mb-2">
+<button class="btn btn-outline-info" type="submit">Ingresar</button>
+</div>
+<!-- Login -->
+
+
+
+<!-- Forget password -->
+<div class="forgot-pass-msg text-center">
+    <a class="categoriesHref" href="">¿Olvidaste tu contraseña?</a>
+</div>
+<!-- /Forget password -->
+
+
+<!-- Home -->
+<div class="text-center mb-3">
+    <a class="categoriesHref text-center" href="/" >
+      <i class="fas fa-store-alt"></i> Seguir comprando
+     </a>
+ </div>
+<!-- /Home -->
+
+<!-- Register -->
+<div class="text-center ">
+        <a class="categoriesHref" href="/users/register" >
+        <i class="fas fa-user-plus"></i> Crear cuenta
+        </a>
+        </div>
+<!-- /Register -->
+
+
+
+  </form>
+
+<!-- Footer -->
+<%- include('parcials/footer.ejs') %>
+<!-- /Footer -->
+
+<!-- Local js -->
+<script src="../../js/login.js"></script>
+<!-- /Local js -->
+
 </body>
 </html>
