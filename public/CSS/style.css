@@ -978,6 +978,19 @@ body{
 
 /* End of profile styles */
 
+
+.loginButton{
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.rememberMe{
+    display: flex;
+    justify-content: first baseline;
+}
+
+
      /* create and edit products styles */
     .form_container{
         background-color: white;
@@ -1244,6 +1257,8 @@ display: none;
 
     }
 
+    
+
     .lr-main-container{
         background-color: #f2f4f4;
         border: 1px solid;
@@ -1293,6 +1308,12 @@ display: none;
 @media(min-width : 800px){
 div.product_card_container{
     width:30%;
+}
+
+.loginButton{
+justify-content: end;
+margin-top: 4%;
+
 }
 
 .texto-izq-product {
