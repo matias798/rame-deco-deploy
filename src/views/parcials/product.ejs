@@ -1,11 +1,29 @@
-<div class="product_card_container product_card_container_height"> 
-    <a href="/products/detail/<%= product.id %>">
-    <img class="product_card_img "  src="images/home/productos/<%= product.main_image %>" alt="">
+<a  class="nounderline" href="/products/detail/<%= product.id %>">
+
+<div class="card rounded mb-4" style="padding-bottom: 10%;">  
+
+    <!-- image -->
+<div class="justifi-content-center pt-4">
+    <img class="product_card_img  w-75"  src="images/home/productos/<%= product.main_image %>" alt="">
+</div>   
+
     <div>
-        <a  class="links" href="/products/detail/<%= product.id %>">
-        <h3 class="product_card_text product_card_text_mark green_font text-center"><%= product.title %> </h3></a>
+        <!-- Title -->
+        <h3 class="product_card_text product_card_text_mark green_font text-center pt-2 pb-2"><%= product.title %> </h3>
+        <!-- /Title -->
+       
+
+        <!-- summary -->
         <p class="product_card_text"><%= product.summary %></p>
-        <p class="product_card_text product_card_text_mark"><%= product.price %></p>
-    </div>
-    </a>
+        <!-- /summary -->
+        
+
+    <!-- Price -->
+        <p class="product_card_text product_card_text_mark"> 
+        <span>$</span>
+        <%= product.price %>
+    </p>
+    <!-- /Price -->
 </div>
+</div>
+</a>

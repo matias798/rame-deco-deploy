@@ -270,7 +270,7 @@ div.card-container-product-description:hover{
     visibility: visible;
 }
 
-div.pointer-container:hover + div.card-container-product-description {
+div.pointer-container:hover + div.card-container-product-description,div.pointer-container:focus {
     visibility: visible;
     cursor: pointer;
 }
@@ -996,6 +996,9 @@ display: none;
     text-decoration: none;
 }
 
+.nounderline,.nounderline:hover{
+    text-decoration: none !important
+}
 
 /* /CATEGORIES */
 
