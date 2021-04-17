@@ -318,6 +318,13 @@ footer{
     display: flex;
     flex-direction: column;
 }
+
+.justifi-content-center
+{
+  display: flex;
+  justify-content: center;  
+}
+
 /**End Footer**/
 
 

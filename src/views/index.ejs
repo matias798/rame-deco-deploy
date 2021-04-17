@@ -64,14 +64,9 @@
 
 
     <main  class="page_background_color">
-        <section class="section_products">
-            <h3 class="section_tittle">Ambientes Decorados</h3>
-            <div class="flex_property_config">
-                <% for (const scene of scenes) {%> 
-                    <%- include('parcials/scene.ejs',{'scene':scene}) %>      
-                <%} %> 
-        </div>            
-        </section>
+
+
+<!--  Products -->
         <section class="section_products">
             <h3 class="section_tittle">Productos</h3>
             <div class="flex_property_config">
@@ -80,51 +75,69 @@
             <%} %> 
         </div>
         </section>
+
+<!--  /Products -->
+
+
+<!--  Decorated products -->
+
+        <section class="section_products">
+            <h3 class="section_tittle">Ambientes Decorados</h3>
+            <div class="flex_property_config">
+                <% for (const scene of scenes) {%> 
+                    <%- include('parcials/scene.ejs',{'scene':scene}) %>      
+                <%} %> 
+        </div>            
+        </section>
+<!--  /Decorated products -->
+      
+
         <section class="menu_container">
-            <div class="menu_option_container">
-               <a href="/products/categories/1">
+            <div class="menu_option_container d-flex justify-content-center">
+               <a href="/products/categories/1" class="categoriesHref">
                 <i class="fas fa-coffee green_font "></i>
                 <p  class="menu_option_name">Accesorios</p>
             </a>
             </div>
-            <div class="menu_option_container" >
-               <a href="/products/categories/2">
+            <div class="menu_option_container d-flex justify-content-center" >
+               <a href="/products/categories/2" class="categoriesHref">
                 <i class="fas fa-bed green_font"></i>
                 <p class="menu_option_name" style>Dormitorios</p>
                </a>
             </div>
-            <div class="menu_option_container" >
-               <a href="/products/categories/3">
+            <div class="menu_option_container d-flex justify-content-center" >
+               <a href="/products/categories/3" class="categoriesHref">
                 <i class="fas fa-umbrella-beach green_font"></i>
                 <p class="menu_option_name">Exteriores</p>
                 </a>
             </div>
-            <div class="menu_option_container">
-               <a href="/products/categories/4">
+            <div class="menu_option_container d-flex justify-content-center">
+               <a href="/products/categories/4" class="categoriesHref">
                 <i class="fas fa-couch green_font"></i>
                 <p class="menu_option_name">Interiores</p>
                </a>
             </div>
-            <div class="menu_option_container">
-               <a href="/products/categories/5">
+            <div class="menu_option_container d-flex justify-content-center">
+               <a href="/products/categories/5" class="categoriesHref">
 
                 <i class="fas fa-bath green_font"></i>
                 <p class="menu_option_name">Baño</p>
             </div>
-            <div class="menu_option_container">
-                <a href="/products/categories/6">
+            <div class="menu_option_container d-flex justify-content-center">
+                <a href="/products/categories/6" class="categoriesHref">
                 <i class="fas fa-chair green_font "></i>
                 <p class="menu_option_name">Living</p>
                 </a>
             </div>
-            <div class="menu_option_container">
-                <a href="/products/categories/7">
+            <div class="menu_option_container d-flex justify-content-center">
+                <a href="/products/categories/7" class="categoriesHref">
                 <i class="fas fa-desktop green_font"></i>
                 <p class="menu_option_name">Oficina</p>
                 </a>
             </div>
-            <div class="menu_option_container">
-               <a href="/products/categories/8">
+            <div class="menu_option_container d-flex justify-content-center">
+<!--  Decorated products -->
+               <a href="/products/categories/8" class="categoriesHref">
                 <i class="fas fa-tags green_font"></i>
                 <p class="menu_option_name">Ofertas</p>
                </a>
