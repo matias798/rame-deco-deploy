@@ -898,7 +898,9 @@ height: 30vh;
 
 }
 
-
+.map{
+    max-width: 80vw;
+}
 
 
 .iframe-rwd  {
