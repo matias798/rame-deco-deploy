@@ -34,12 +34,6 @@
 <!-- Main image -->
 
 
-
-
-
-
-
-
 <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
     <!-- Overlay -->
     <div class="overlay"></div>
@@ -74,7 +68,7 @@
         <div class="slide-2"></div>
         <div class="hero">        
           <hgroup>
-              <h1>Interiores</h1>        
+              <h2>Interiores</h2>        
               <h3>Disfruta de renovar el interior de tu hogar con nuestros nuevos articuloss</h3>
           </hgroup>      
       <a href="/products/categories/4" class="categoriesHref">
@@ -91,7 +85,7 @@
         <div class="hero">        
           <hgroup>
               <h1>Accesorios</h1>        
-              <h3>Nueva linea de accesorios para decorar tu hogar</h3>
+              <p>Nueva linea de accesorios para decorar tu hogar</p>
           </hgroup>
       <a href="/products/categories/1">
           <button class="btn btn-hero btn-lg" role="button">Ver más </button>
@@ -116,7 +110,7 @@
 
 <!--  Products -->
         <section class="section_products">
-            <h3 class="section_tittle ">Productos</h3>
+            <h3 class="section_tittle text-center">Productos</h3>
             <div class="flex_property_config">
             <% for (const product of products) {%> 
                 <%- include('parcials/product.ejs',{'product':product}) %>      

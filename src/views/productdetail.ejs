@@ -9,11 +9,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
 <!-- Favicon -->
-<link rel = "icon" href="../images/white-logo.jpg" type = "image/x-icon"> 
+<link rel = "icon" href="../../images/white-logo.jpg" type = "image/x-icon"> 
 <!-- Favicon -->
 
 
+   <!-- Bootswatch css -->
+   <link rel="stylesheet" href="../../CSS/bootstrap.min.css">
+   <!-- Bootswatch css -->
+
   <title>Detalle del producto</title>
+
+
+<!-- web description -->
+<meta name="description" content="<%= product.title %>,<%= product.summary%> ">
+<!-- /web description -->
+
 
 </head>
 
@@ -29,22 +39,21 @@
     <div class="text_container"><p><%= product.summary%></p></div>
     <div class="grid_container">
       <div class="img_container">
-        <img src="/images/home/productos/<%= product.main_image%>" alt="" >
+        <img class="rounded p-4" src="/images/home/productos/<%= product.main_image%>" alt="<%= product.title %>" >
       </div>
       <div class="text_container"><p><%= product.description%></p></div>  
       <div class="text_container"><p ><%= product.product_detail%></p></div>
       
       <div class="img_container">
-        <img src="/images/home/productos/<%= product.images[0].path %>" alt="" >
+        <img class="rounded p-4" src="/images/home/productos/<%= product.images[0].path %>" alt="<%= product.title %>" >
       </div>
     </div>
       
       
     </div>
-    <div>
-      <h3 class="form_title_pd"><%= product.title %></h3>
+    <div class="mt-5">
       <div class="price_container">
-      <div class="form_element_container"><p>Precio: $<span class="precio" id="precio"><%= product.price%></span></p></div>
+        <div class="form_element_container"><p>Precio: $<span class="precio" id="precio"><%= product.price%></span></p></div>
       <form action="/products/addToCart" method="POST" class="form_element_container" >
         <div class="amount_container">
         <input style="display: none;" type="text" id="id_product" name="id_product" value="<%= product.id%>" />
@@ -54,7 +63,7 @@
         <input class="aumentar-cantidad" type="button" value="+" />
         </div>
       
-        <button class="boton-agregar-carrito" type="submit">Agregar</button>
+        <button class="boton-agregar-carrito mb-5" type="submit"> <i class="fab fa-opencart"></i>Agregar</button>
       </form>
       <div class="form_element_container">
         <p>Total: $<span class="precio" id="total"><%= product.price%></span></p>
