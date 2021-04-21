@@ -1,3 +1,63 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+  
+    <!-- Favicon -->
+  <link rel = "icon" href="../../images/white-logo.jpg" type = "image/x-icon"> 
+  <!-- Favicon -->
+  
+  
+     <!-- Bootswatch css -->
+     <link rel="stylesheet" href="../../CSS/bootstrap.min.css">
+     <!-- Bootswatch css -->
+  
+    <title>Detalle del producto</title>
+  
+  
+  <!-- web description -->
+  <meta name="description" content="Rame deco error page">
+  <!-- /web description -->
+  
+  
+  </head>
+
+<body>
+
+    <!-- Navbar -->
+<%- include('parcials/header.ejs',{'user':user}) %>
+    <!-- /Navbar -->
+
+  
+  <!-- Error messages -->
+<div class="text-center mt-5">
+  
+<h1>Tu pagina no fue encontrada</h1>
+<h2> Error <%= error.status %></h2>
+
+</div>
+<!-- /Error message -->
+
+
+<!-- Home button -->
+<a href="/" class="justifi-content-center mt-3">
+    <button type="button" class="btn btn-primary btn-sm">Volver a inicio</button>
+    </a>
+
+<!-- /Home button -->
+
+
+
+<!-- Ilustration -->
+<div class="justifi-content-center">
+
+<img class="errorImage"  src="/images/error404.svg" alt="" >
+</div>
+<!-- Ilustration -->
+
+
+<%- include('parcials/footer.ejs') %>
+
+
+</body>

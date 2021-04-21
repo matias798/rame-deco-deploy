@@ -253,8 +253,11 @@ img.banner_container_image{
 /* Carrousel main */
 
 
-
-
+/*  error view*/
+.errorImage{
+    max-width: 40vw;
+}
+/* / error view*/
 
 
 /**Products section**/
