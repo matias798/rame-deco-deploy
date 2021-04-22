@@ -10,9 +10,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
-  </head>
+ 
+
+
+    <!-- boostwatch css -->
+    <link rel="stylesheet" href="../../CSS/bootstrap.min.css">
+    <!-- /boostwatch css -->
+
+    <!-- boostsrap 3.2 css -->
+    <link rel="stylesheet" href="../../CSS/bootstrap.minv3.2.css">
+    <!-- /boostsrap 3.2 css -->
+
+   </head>
   <body>
     <!-- navbar -->
     <%- include('parcials/header.ejs',{'user':user}) %> 
@@ -22,8 +31,8 @@
             <div class="card-body mt-6 mb-6">
      
 
-<h4>Tu carrito esta vacío, ¡agregá productos!</h4>
-<a href="/">
+<h1 class="text-center">Tu carrito esta vacío, ¡agregá productos!</h4>
+<a class="mt-4 justifi-content-center" href="/">
 <button type="button" class="btn btn-primary btn-sm">Continuar con la compra</button>
 </a>
 
@@ -39,5 +48,11 @@
         
 <!-- partial of the footer-->
     <%- include('parcials/footer.ejs') %>
+
+  
+    <!-- Botstrap js -->
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- /Botstrap js -->
     </body>
     </html>

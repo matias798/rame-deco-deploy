@@ -9,12 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
     <title>Ramé Deco</title>
-    
+
     <!-- boostwatch css -->
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
     <!-- /boostwatch css -->
 
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!-- boostsrap 3.2 css -->
+    <link rel="stylesheet" href="../CSS/bootstrap.minv3.2.css">
+    <!-- /boostsrap 3.2 css -->
     
 
 <!-- web description -->
@@ -29,7 +31,17 @@
 </head>
 
 <body class="page_background_color">
-    <%- include('parcials/header.ejs',{'user':user}) %> 
+
+<!-- Navbar -->
+  <%- include('parcials/header.ejs',{'user':user}) %>
+<!-- /Navbar -->
+
+
+
+
+
+
+
 
 <!-- Main image -->
 
@@ -133,8 +145,13 @@
         </section>
 <!--  /Decorated products -->
       
+<!--Categories title  -->
+<h3 class="text-center mb-2" id="TitleCategory"> Categorias </h3>
 
-        <section class="menu_container">
+<!--/Categories title  -->
+ 
+
+<section class="menu_container">
             <div class="menu_option_container d-flex justify-content-center">
                <a href="/products/categories/1 "target="_blank" class="categoriesHref">
                 <i class="fas fa-coffee green_font "></i>
@@ -188,9 +205,9 @@
     <%- include('parcials/footer.ejs') %>
 
     <!-- Botstrap js -->
-
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- /Botstrap js -->
   
 </body>
 </html>
