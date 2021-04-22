@@ -25,8 +25,11 @@
 
 </head>
 <body style="margin:0; background-color: #e2e8f0;">
+   
     <%- include('parcials/header.ejs',{'user':user}) %> 
-    <main class="lr-main-container">
+   
+   
+    <main class="jumbotron ">
         <div class="lr-title">
             <h2 class="form_title">Creá tu cuenta</h2>
         </div>
@@ -34,7 +37,7 @@
         <% if (typeof errors != 'undefined') { %> 
             <% for (let i =0 ; i < errors.length;i++){ %> 
             
-                <div class='p-3 mb-2 bg-secondary text-white text-center '> <%=errors[i].msg%>  </div>
+                <div class='p-3 mb-2 bg-secondary  text-center '> <%=errors[i].msg%>  </div>
                 
             <% } %> 
             <% } %> 
@@ -46,25 +49,21 @@
             </div>
         <form class="lr-form registerform" action="/users/register" method="POST">
                 <div>
-                    <label class="lr-fontsize" for="username">Nombre de usuario</label>
-                    <input class="form_lr-width lr-fontsize username" type="text" id="username" name="username" placeholder="Nombre de usuario">
+                    <input class="form_lr-width form-control username" type="text" id="username" name="username" placeholder="Nombre de usuario">
                     <p class="username-error validation-error-msg"></p>
                 </div>
                 <div>
-                    <label class="lr-fontsize" for="username">Nombre</label>
-                    <input class="form_lr-width lr-fontsize first_name" type="text" id="first_name" name="first_name" placeholder="Nombre">
+                    <input class="form_lr-width form-control first_name" type="text" id="first_name" name="first_name" placeholder="Nombre">
                     <p class="firstname-error validation-error-msg"></p>
                 </div>
 
                 <div>
-                    <label class="lr-fontsize" for="username">Apellido</label>
-                    <input class="form_lr-width lr-fontsize last_name" type="text" id="last_name" name="last_name" placeholder="Apellido">
+                    <input class="form_lr-width form-control last_name" type="text" id="last_name" name="last_name" placeholder="Apellido">
                     <p class="lastname-error validation-error-msg"></p>
                 </div>
     
                 <div>
-                <label class="lr-fontsize" for="email">E-mail</label>
-                <input class="form_lr-width lr-fontsize email" type="email" id="email" name="email" placeholder="E-mail">
+                <input class="form_lr-width form-control email" type="email" id="email" name="email" placeholder="E-mail">
                 <p class="email-error validation-error-msg"></p>
          
                 <!-- div que muestra si el email ya esta en uso -->
@@ -77,36 +76,47 @@
             </div>
 
             <div>
-                <label class="lr-fontsize" for="contraseña">Contraseña</label>
+
+                <div class="register-password-msg">
+                    <p class="text-center">La contraseña debe contener al menos 8 caracteres</p>
+                       </div>
+
+
                 <div class="input-plus-icon">
-                    <input class="lr-fontsize password" type="password" id="password" name="password" placeholder="Elegí tu contraseña">
+                    <input class="form-control password" type="password" id="password" name="password" placeholder="Escribe tu contraseña">
                     <span class="show-password"><i class="fas fa-eye"></i></span>
                 </div>
                 <p class="password-error validation-error-msg"></p>
 
-                <div class="register-password-msg">
-         <small class="text-center">La contraseña debe contener al menos 8 caracteres</small>
-            </div>
+                
                 <div class="input-plus-icon">
-                    <input class="lr-fontsize password_confirm" type="password" id="password_confirm" name="password_confirm" placeholder="Confirmá tu contraseña">
+                    <input class="form-control password_confirm" type="password" id="password_confirm" name="password_confirm" placeholder="Confirmá tu contraseña">
                     <span class="show-password-conf"><i class="fas fa-eye"></i></span>
                 </div>
                 <p class="password-conf-error validation-error-msg"></p>
             </div>
             
+
+                <div class="btn-container-register loginButton">
+                <button class="btn btn-outline-primary text-center" type="submit">Registrarme</button>
+            </div>
+        </form>
+                <div><p>¿Ya tenés cuenta?<a href="/users/login" style='font-weight:bolder'> Iniciá sesión</a>  </p> </div>
+
+
                 <div class="register-newsletter-msg">
-                    <input type="checkbox" name="newsletter" value="newsletter si"> Quiero recibir e-mails de RaméDeco con ofertas y promociones <br> exclusivas acordes a mis gustos, intereses e historial de compras.
+                    <input type="checkbox" name="newsletter" value="newsletter si"> 
+                    Quiero recibir e-mails de RaméDeco con ofertas y promociones 
                     </div>
                     
 
-                <div class="btn-container-register"><button class="btn-login-register form_lr-width" type="submit">Registrarme</button></div>
-            </form>
-                <div><p>¿Ya tenés cuenta? Ingresá <a href="/users/login">acá</a></p></div>
-
-                <div class="register-final-msg"><p>Podrás agregar más información personal, gustos y preferencias más adelante</p></div>
+                <div class="mt-2 register-final-msg"><p>Podrás agregar más información personal, gustos y preferencias más adelante</p></div>
     </main>
     <%- include('parcials/footer.ejs') %>
+
+    <!-- Local js -->
     <script src="../js/register.js"></script>
+    <!-- Local js -->
 
 
     <!-- Botstrap js -->

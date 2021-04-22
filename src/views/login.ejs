@@ -41,7 +41,7 @@
   <%- include('parcials/header.ejs',{'user':user}) %>
   <!-- /Navbar -->
   
-    <form class="jumbotron loginForm" action="/users/login" method="POST">
+    <form class="jumbotron loginForm mb-0" action="/users/login" method="POST">
 
         <div class="lr-title">
             <h2 class="text-center mb-3 p-3">Iniciá sesión</h2>
@@ -49,7 +49,7 @@
           
            
             <!-- div para mostrar errores en js -->
-            <div class="userError"></div>
+            <div class="userError text-danger"></div>
             
 
          <!-- Shows express validator errors -->
@@ -67,35 +67,30 @@
 
 
     <!-- user -->
-    <div class="form-group">
-        <div class="justifi-content-center">
-<label for="password ml-5 pb-5">  Usuario</label>
-        </div>
-        <input class="form-control user m-4" type="text" id="username" aria-describedby="emailHelp" name="username" placeholder="Escribe tu nombre de usuario">
-      </div>
+    <div class="form-group justifi-content-center">
+        <input class="form-control user m-4" type="text" id="username" aria-describedby="emailHelp" name="username" placeholder="  Escribe tu nombre de usuario">
+     </div>
     <!-- /user -->
 
 
 <!-- Password -->
 
-<div class="justifi-content-center">
-<label for="password ml-5 pb-5">  Contraseña</label>
-
-</div>
-      <div class="form-group">
-              
-        
         <div class="d-flex justify-content-evenly">
-        <input class="form-control  m-2  writePassword" style="width: 90vw;"  type="password" id="password" name="password" placeholder="      Escribe tu Contraseña">
+        <input class="form-control m-3 writePassword" style="width: 90vw;"  type="password" id="password" name="password" placeholder="      Escribe tu Contraseña">
 
         <!-- shows password  -->
-        <div class="d-flex align-items-center show-password"><i class="fas fa-eye"></i></div>
+        <div class="d-flex align-items-center show-password"><i class=" iconoInput fas fa-eye"></i></div>
         <!-- shows password  -->
     
     </div>
 
+
+
+
+
+    
         <!-- Shows error  with the password if it exists-->
-        <div class="passwordError"></div>
+        <div class="passwordError text-center"></div>
         <!-- /Shows error  with the password if it exists-->
 
   
@@ -107,7 +102,7 @@
 <!-- Shows error if the user or password isn't found -->
 <% if (typeof errrorMessage != 'undefined') { %> 
     <div class="d-flex justify-content-center"> 
-    <div style="color: red;"><%=errrorMessage%> </div>
+    <div style="color: red; text-center"><%=errrorMessage%> </div>
      </div>
      <% } %>
 <!-- Shows error if the user or password isn't found -->
@@ -115,15 +110,17 @@
 
 
 
-
+<!-- Remember me -->
+<div class="categoryJustifyContent mt-3">
+    <span class=" pl-3  rememberMe d-flex justify-content-evenly  mb-1">
+        <input type="checkbox" name="recordarme" class="form-check-input" value="recordarme">    Recordame!
+        </span>
+        </div>
+     <!-- /Remember me -->
+    
 
    
-<!-- Remember me -->
-<span class=" pl-3 ml-5 rememberMe mb-4">
-<input type="checkbox" name="recordarme" class="form-check-input" value="recordarme"> 
-  Recordame!
-</span>
-    <!-- /Remember me -->
+
 
 <!-- Login -->
 <div class=" loginButton mb-2">
@@ -157,7 +154,6 @@
 <!-- /Register -->
 
 
-
   </form>
 
 <!-- Footer -->
@@ -168,5 +164,10 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <!-- /Botstrap js -->
+    <!-- Local js -->
+    <script src="../../js/login.js"></script>
+    <!-- Local js -->
+
+
 </body>
 </html>

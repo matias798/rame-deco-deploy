@@ -1156,6 +1156,10 @@ display: none;
 
 /* end of edit products styles */
 
+.categoryJustifyContent{
+    display:flex;
+    justify-content: center;
+}
 
 
 /* CATEGORIES */
@@ -1280,6 +1284,10 @@ display: none;
 
     }
 
+
+.categoryJustifyContent{
+    justify-content: first baseline !important;
+}
     
 
     .lr-main-container{

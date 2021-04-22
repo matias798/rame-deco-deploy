@@ -76,20 +76,28 @@
           </div>
     </section>
   
+    <div>
     <% total+= product.subtotal%>
+  </div>
     <% } %>
 
     <!-- Products sugested to the clients -->
   
 
     <!-- Resume of prices and continue button -->
-    <section class="container-order-summary">
-        <div class="order-summary-bottom">
-        <div class="order-summary-total form-group row">
-          <label class="col-sm-2 col-form-label" for="total_purchase">Total:</label>
+        <div class="order-summary-bottom d-flex justify-content-around p-5">
+      
+          <!-- Total -->
+          <div class="order-summary-total d-flex form-group ">
+          <label class="col-sm-2 col-form-label mr-5" for="total_purchase"> 
+          <h5>  Total:</h5>
+          </label>
           <input  readonly class="form-control" type="text" name="total_purchase" id="total_purchase" value="<%= total %>" >
         </div>
-        <div >
+          <!-- Total -->
+
+
+        <div class="">
         <div class="form-group">
             <label class="labelName">Formas de Pago:</label>
             <select class="form-control" name="paymentMethod">
@@ -99,12 +107,13 @@
             </select>
         </div>
 
-        
           <button type="submit" class="btn btn-primary btn-sm">
             Comprar
           </button>
         </div> 
-      </div>
+
+      </div> 
+
     </section>
   </form>
   <section class="Sugested-products">
@@ -142,13 +151,6 @@
     <%- include('parcials/footer.ejs') %>
     <script src="../js/shoppingCart.js"></script>
 
-
-    <!-- Botstrap js -->
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        <!-- /Botstrap js -->
-
-
-
+    
   </body>
 </html>

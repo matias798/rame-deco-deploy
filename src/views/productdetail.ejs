@@ -36,19 +36,19 @@
     <% if (product != undefined) { %>
 
     <section>
-      <h1 class="product_detail_title"><%= product.title %></h1>
+      <h1 class="product_detail_title mb-3"><%= product.title %></h1>
       
     </section>
     <div class="text_container"><p><%= product.summary%></p></div>
     <div class="grid_container">
       <div class="img_container">
-        <img class="rounded p-4" src="/images/home/productos/<%= product.main_image%>" alt="<%= product.title %>" >
+        <img class="rounded p-4 rounded" src="/images/home/productos/<%= product.main_image%>" alt="<%= product.title %>" >
       </div>
       <div class="text_container"><p><%= product.description%></p></div>  
       <div class="text_container"><p ><%= product.product_detail%></p></div>
       
       <div class="img_container">
-        <img class="rounded p-4" src="/images/home/productos/<%= product.images[0].path %>" alt="<%= product.title %>" >
+        <img class="rounded p-4 rounded" src="/images/home/productos/<%= product.images[0].path %>" alt="<%= product.title %>" >
       </div>
     </div>
       
@@ -66,7 +66,8 @@
         <input class="aumentar-cantidad" type="button" value="+" />
         </div>
       
-        <button class="boton-agregar-carrito mb-5" type="submit"> <i class="fab fa-opencart"></i>Agregar</button>
+        <button class="boton-agregar-carrito mb-5" type="submit">
+           <i class="fab fa-opencart"></i>Agregar</button>
       </form>
       <div class="form_element_container">
         <p>Total: $<span class="precio" id="total"><%= product.price%></span></p>
