@@ -64,7 +64,7 @@ window.addEventListener('load', function() {
                         errors++;
 
                         //se muestra el error 
-                        passwordError.innerHTML = "Debes escribir el password";
+                        passwordError.innerHTML = "Debes escribir tu Contraseña";
                   } else {
 
                         //No muestro ningún error
