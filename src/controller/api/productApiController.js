@@ -1,5 +1,5 @@
 const db = require("../../database/models");
-const urlBackend="http://localhost:3001/images/home/productos/"
+const urlBackend="https://ramedeco.herokuapp.com/images/home/productos/"
 module.exports = {
     getProducts: async function (req, res) {
         try {
@@ -59,7 +59,7 @@ console.log(products)
             });
             product.main_image=urlBackend+product.main_image
             product.images.forEach(element => {
-                element.path="http://localhost:3001/images/home/productos/"+element.path
+                element.path="https://ramedeco.herokuapp.com/images/home/productos/"+element.path
             })
             res.status(200).json(product)
 

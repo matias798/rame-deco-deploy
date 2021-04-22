@@ -5,7 +5,7 @@ module.exports = {
         return res.json({
             articles: [
                 {
-                    url: 'http://localhost:3001/',
+                    url: 'https://ramedeco.herokuapp.com/',
                     title: "Ver Categorías - APP",
                 }
             ]

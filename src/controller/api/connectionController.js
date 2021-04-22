@@ -5,22 +5,22 @@ module.exports = {
         return res.json({
             categories: [
                 {
-                    url: 'http://localhost:3001/',
+                    url: 'https://ramedeco.herokuapp.com/',
                     title: "INICIO",
                     classIcon:"fas fa-home"
                 },
                 {
-                    url: 'http://localhost:3001/products/',
+                    url: 'https://ramedeco.herokuapp.com/products/',
                     title: "LISTADO DE PRODUCTOS",
                     classIcon:"fas fa-align-justify"
                 },
                 {
-                    url:'http://localhost:3001/products/create',
+                    url:'https://ramedeco.herokuapp.com/products/create',
                     title: "AGREGAR PRODUCTO",
                     classIcon:"fas fa-plus-circle"
                 },
                 {
-                    url:'http://localhost:3001/users/',
+                    url:'https://ramedeco.herokuapp.com/users/',
                     title: "USUARIOS",
                     classIcon:"fas fa-users"
                 }

@@ -64,11 +64,11 @@
         <div class="item slides active">
         <div class="slide-1"></div>
         <div class="hero">
-          <hgroup>
-              <h2>Dormitorios</h2> 
+          <hgroup >
+              <h1 style="font-size :x-large;" class="mb-3">Dormitorios</h1> 
          </hgroup>
       <a href="/products/categories/2" class="categoriesHref">
-          <button class="btn btn-hero btn-lg" role="button">Ver más </button>
+          <button class="btn btn-secondary btn-lg" role="button">Ver más </button>
       </a>
         </div>
       </div>
@@ -80,11 +80,11 @@
         <div class="slide-2"></div>
         <div class="hero">        
           <hgroup>
-              <h2>Interiores</h2>        
-              <h3>Disfruta de renovar el interior de tu hogar con nuestros nuevos articuloss</h3>
+              <h1>Interiores</h1>        
+              <h3 class="text-muted">Disfruta de renovar el interior de tu hogar con nuestros nuevos articuloss</h3>
           </hgroup>      
       <a href="/products/categories/4" class="categoriesHref">
-          <button class="btn btn-hero btn-lg" role="button">Ver más </button>
+          <button class="btn btn-secondary btn-lg" role="button">Ver más </button>
       </a>
         </div>
       </div>
@@ -97,10 +97,10 @@
         <div class="hero">        
           <hgroup>
               <h1>Accesorios</h1>        
-              <p>Nueva linea de accesorios para decorar tu hogar</p>
+              <p class="text-muted">Nueva linea de accesorios para decorar tu hogar</p>
           </hgroup>
       <a href="/products/categories/1">
-          <button class="btn btn-hero btn-lg" role="button">Ver más </button>
+          <button class="btn btn-secondary btn-lg" role="button">Ver más </button>
       </a>
         </div>
       </div>
@@ -122,7 +122,7 @@
 
 <!--  Products -->
         <section class="section_products">
-            <h3 class="section_tittle text-center">Productos</h3>
+            <h3 class=" text-center">Productos</h3>
             <div class="flex_property_config">
             <% for (const product of products) {%> 
                 <%- include('parcials/product.ejs',{'product':product}) %>      
@@ -136,7 +136,7 @@
 <!--  Decorated products -->
 
         <section class="section_products">
-            <h3 class="section_tittle text-center">Ambientes Decorados</h3>
+            <h3 class=" text-center">Ambientes Decorados</h3>
             <div class="flex_property_config">
                 <% for (const scene of scenes) {%> 
                     <%- include('parcials/scene.ejs',{'scene':scene}) %>      

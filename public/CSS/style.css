@@ -253,9 +253,20 @@ img.banner_container_image{
 #SearchIcon{display:block;}
     
 
+
+#inputEmail{
+         width: 30px;
+         margin-right: 400px
+    ;
+}
 }
 @media screen and (max-width: 640px){
     .hero h1 { font-size: 4em; }    
+
+
+.inputEmail{
+    width: 30px;
+}
 
     .logoHeder{
         max-width: 9vw;
@@ -463,6 +474,8 @@ footer{
     background-color:#2c303a;
     padding: 15px;   
 }
+
+
 
 
 .footer_context_container{
@@ -1256,10 +1269,6 @@ display: none;
     .unified{
         width: 60%;
     }
-    .unified #subscribe_input{
-        width: 50%;
-    }
-
     
     .texto-izq-product {
         width: auto;
