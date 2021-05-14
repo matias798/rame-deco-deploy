@@ -1,4 +1,4 @@
-![Screenshot_2021-04-06 Ramé Deco](https://user-images.githubusercontent.com/58121395/113718450-0749d380-96c3-11eb-8c0d-1fb264d4c60b.png)
+## El proyecto final se encuentra en el branch sprint_8
 
 
 ## Nuestro Ecommerce
