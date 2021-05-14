@@ -1,7 +1,7 @@
 ## El proyecto final se encuentra en el branch sprint_8
 
 
-## Nuestro Ecommerce
+#### Nuestro Ecommerce
 
 Nuestro sitio es un tienda virtual orientada a la venta de decoración de ambientes, herramientas y insumos para la construcción. Nuestra audiencia se dividirá en:
 
