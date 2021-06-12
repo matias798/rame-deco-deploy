@@ -55,7 +55,7 @@ let productsContoller = {
       purchase_detail.purchaseId=purchase.id 
       await purchase_detail.save() 
     }
-    req.session.shoppingCart=undefined
+    req.session.shoppingCart = undefined
     res.redirect("/")
   }catch(error){
     console.log(error)

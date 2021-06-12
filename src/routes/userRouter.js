@@ -59,10 +59,11 @@ router.post('/login',[
 check('username').notEmpty().withMessage('Ingresaste mal tu nombre de usuario, escribelo nuevamente'),
 check('password').isLength({min:6}).withMessage('Ingresaste mal tu contraseña, escribela nuevamente ')
 ],usersController.logInUser );
+
+/* Route that logs the user out of the session*/
 router.get('/logout',loginMiddleware, usersController.logOutUser);
 
 router.get('/repetir',usersController.repetir)
-
 router.get('/userExist',usersController.userExist)
 
 module.exports = router;
